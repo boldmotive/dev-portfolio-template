@@ -20,8 +20,7 @@ export const SkillsMainContainer = styled.div`
 `
 
 export const SkillsIconContainer = styled.div`
-    position: relative;
-    height: 100%;
+    
     width: 100vw; /* Ensure it spans the full viewport width */
     display: flex;
     align-items: center;
@@ -30,20 +29,29 @@ export const SkillsIconContainer = styled.div`
     background-color: rgba(0,0,0,0.6);
     animation: ${dropDown} 1s ease-in-out;
 
-    /* Remove any global padding/margin that might affect full width */
-    margin: 0;
-    padding: 0;
+    /* Consider adjustments needed to accommodate the 
+    marquee behavior on smaller screens */
+    overflow: hidden; /* Prevents horizontal scroll */
+    padding: 0; /* Ensures icons are evenly spaced */
+    margin: 0 auto; /* Centers the container */
 `
 
 export const SingleSkill = styled.div`
   cursor: pointer;
   font-size: 80px;
   color: white;
-  @media (max-width: 768px) {
+  justify-content: center; /* Center icons within the container */
+  align-items: center; /* Vertically center */
+  
+  @media (max-width: 992px) { /* For tablets */
+    font-size: 65px;
+  }
+  
+  @media (max-width: 768px) { /* For smaller tablets and large phones */
     font-size: 55px;
   }
-  @media (max-width: 576px) {
-    max-width: 100%;
+  
+  @media (max-width: 576px) { /* For small phones */
     font-size: 40px;
   }
 `
@@ -60,8 +68,12 @@ export const SkillsInformationWindow = styled.div`
   height: 80%;
   margin-top: 80px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Creates a responsive grid layout */
   grid-template-rows: 1fr 1fr;
+
+  @media (max-width: 576px) {
+    gap: 10px; /* Smaller gap for very small screens */
+  }
 `
 export const SkillsBlock = styled.div`
   width: 100%;

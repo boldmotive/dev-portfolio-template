@@ -82,21 +82,35 @@ export const WelcomeHeader = styled.div`
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 5%;
     animation: ${dropDown} 1s ease-in;
     h1 {
         font-size: 50px;
     }
     @media (max-width: 1200px) {
         h1 {
-            font-size: 35px;
+          font-size: 35px; /* Intermediate screen size adjustment */
+          margin-top: 3vh; /* Example of using 'vh' for dynamic spacing */
         }
-    }
-    @media (max-width: 576px) {
+      }
+    
+      @media (max-width: 768px) {
+        /* Adjust for tablets and larger phones */
+        margin-top: 1vh; /* Example of using 'vh' for dynamic spacing */
         h1 {
-            font-size: 25px;
+          font-size: 30px; /* Smaller than 1200px but larger than the smallest size */
         }
-    }
+      }
+    
+      @media (max-width: 576px) {
+        padding: 15px;
+        padding-top: 10px;
+        margin: 15px 0; /* Adjusted margin for very small screens */
+        h1 {
+          margin-top: 3vh; /* Example of using 'vh' for dynamic spacing */
+          font-size: 25px; /* Smallest screen size adjustment */
+        }
+      }
 `
 export const WelcomeText = styled.div`
     display: flex;
