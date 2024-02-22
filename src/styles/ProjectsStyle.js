@@ -14,19 +14,19 @@ const fromLeft = keyframes`
     }
 `
 
-const fromRight = keyframes`
-    0% {
-        opacity: 0;
-        transform: translateX(100px)
-    }
-    70% {
-        opacity: 0.2;
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0px)
-    }
-`
+// const fromRight = keyframes`
+//     0% {
+//         opacity: 0;
+//         transform: translateX(100px)
+//     }
+//     70% {
+//         opacity: 0.2;
+//     }
+//     100% {
+//         opacity: 1;
+//         transform: translateX(0px)
+//     }
+// `
 
 export const ProjectsMainContainer = styled.div`
     position: relative; /* Establishes a new stacking context */

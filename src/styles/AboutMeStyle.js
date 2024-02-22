@@ -3,16 +3,6 @@ import background1 from '../images/nyc-cityscape.png';
 // import background2 from '../images/nyc-cityscape-grid.png';
 import Slider from 'react-styled-carousel';
 
-const dropDown = keyframes`
-    from {
-    transform: translateX(100%);
-  }
-
-  to {
-    transform: translateX(0%);
-  }
-`
-
 const fromLeft = keyframes`
     0% {
         opacity: 0;

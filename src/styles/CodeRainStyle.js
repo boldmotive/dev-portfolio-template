@@ -1,4 +1,4 @@
-import styled, { keyframes, css, createGlobalStyle } from 'styled-components';
+import styled, { keyframes, createGlobalStyle } from 'styled-components';
 import background from '../images/nyc-cityscape.png';
 
 const codeRain = keyframes`{
