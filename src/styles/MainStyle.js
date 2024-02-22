@@ -57,8 +57,9 @@ export const HomeMainContainer = styled.div`
     display: flex;
     flex-direction: column; /* Ensures content is stacked vertically */
     align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    overflow: hidden;
+    justify-content: flex-start; /* Change to start to avoid pushing content too far down on small screens */
+    overflow-x: hidden; /* Ensure no horizontal scroll */
+    padding: 20px 0; /* Add some vertical padding */
     // border: 2px solid red; /* Temporary for debugging */
     
     &:after {
@@ -114,18 +115,30 @@ export const WelcomeText = styled.div`
         color: white;
         text-align: center;
     }
+
+    padding: 20px;
+    margin: 20px 0; /* Add some margin for spacing */
+    
+    @media (max-width: 576px) {
+        padding: 15px;
+        margin: 15px 0;
+    }
 `
 
 export const ModernButton = styled.button`
-  padding: 15px 30px; /* Increased padding */
-  font-size: 18px; /* Increased font size */
-  color: #FFFFFF;
+  padding: 10px 20px; /* Slightly reduce padding for smaller screens */
+  font-size: 16px; /* Adjust font size for better fit */
+  
+  /* Button styling */
+  text-decoration: none;
+  display: inline-block; /* To enable padding and margins */
+  color: #FFFFFF; /* Text color */
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent grey - Primary button color */
   border: none;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Adds a smooth transition to the button */
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.9); /* Darker shade on hover */
@@ -146,6 +159,11 @@ export const ModernButton = styled.button`
   &:disabled {
     background-color: #0056b3;
     cursor: not-allowed;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+    padding: 8px 15px;
   }
 `
 

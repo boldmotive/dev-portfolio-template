@@ -83,6 +83,7 @@ export const Column = styled.div`
 // Container for the two columns
 export const TwoColumnLayout = styled.div`
   display: flex;
+  flex-direction: row; // Default to side-by-side
   align-items: flex-start; // Align items at the start of the container
   gap: 20px; // Adds space between the two columns
   animation: ${fromLeft} 1.5s ease-in;
@@ -92,18 +93,21 @@ export const TwoColumnLayout = styled.div`
     text-align: left;
   }
 
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1; // Ensure it's above the :after pseudo-element of the container
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; // Ensure it's above the :after pseudo-element of the container
 
-    h3 {
-        font-size: 30px;
-        color: white;
-        text-align: center;
-    }
+  h3 {
+      font-size: 30px;
+      color: white;
+      text-align: center;
+  }
+
+  @media (max-width: 768px) { // Adjust based on your design
+    flex-direction: column; // Stack vertically on smaller screens
+    align-items: center; // Center align the stacked columns
+  }
 `;
 
 // Styled component for the left column (headshot)
@@ -111,13 +115,13 @@ export const HeadshotColumn = styled.div`
   flex: 1; // Takes up 1 portion of the space
   max-width: 35%; // Ensures it doesn't exceed half the parent's width
   animation: ${fromLeft} 1.5s ease-in;
+  margin-left: 5%; // Adds a bit of space to the left of the image
 
   img {
-    width: 85%; // Makes the image responsive
+    width: 100%; // Makes the image responsive
     height: auto; // Keeps the aspect ratio of the image
     align-self: center; // Aligns the image to the center of the column
-    margin: 0 auto; // Centers the image within the column
-    margin-left: 10%; // Adds a bit of space to the left of the image
+    margin: 0 auto; // Centers the image within the column 
   }
 
   @media (max-width: 1200px) {
@@ -126,8 +130,9 @@ export const HeadshotColumn = styled.div`
         }
     }
   @media (max-width: 768px) {
-        margin-top: 50px;
-    }
+    max-width: 80%; // Allow the image to take more width on smaller screens
+    margin-left: 0; // Reset margins for smaller screens
+  }
   @media (max-width: 576px) {
         h3 {
             font-size: 15px;
@@ -143,22 +148,30 @@ export const AboutColumn = styled.div`
   color: white;
   animation: ${fromRight} 1.5s ease-in;
 
-  @media (max-width: 1200px) {
-        h3 {
-            font-size: 25px;
-        }
+  p {
+    margin-bottom: 15px; // Ensure enough space between paragraphs
+
+    @media (max-width: 768px) {
+      margin-bottom: 12px;
     }
+  }
+
+  h1, h3, p {
+    @media (max-width: 768px) {
+      font-size: 90%; // Slightly reduce font size for smaller screens
+    }
+    @media (max-width: 576px) {
+      font-size: 80%; // Further reduce for very small screens
+    }
+  }
+
   @media (max-width: 768px) {
-        margin-top: 50px;
-    }
-  @media (max-width: 576px) {
-        h3 {
-            font-size: 15px;
-        }
-    }
+    max-width: 100%; // Use the full width available
+    margin-right: 0; // Reset margins for consistency
+  }
   `;
 
-  // If you're using styled-components, you might add something like this
+// Styled component for the awards and certifications section
 export const StyledSlider = styled(Slider)`
     width: 100%; // Ensure it takes the full width of its container
     height: auto; // Adjust height based on content
@@ -166,5 +179,9 @@ export const StyledSlider = styled(Slider)`
     img {
         max-width: 100%; // Ensure images are not wider than the slider
         height: auto; // Maintain aspect ratio
+    }
+
+    @media (max-width: 768px) {
+      width: 95%; // Slightly reduce width to ensure it fits within screen bounds, including padding/margin
     }
 `;

@@ -61,11 +61,14 @@ const AboutMe = () => {
         </h2>
         <p>
             {/* List awards and certifications here */}
+            <center>
+            I have earned my qualifications over the past several years and have been recognized for my hard work and dedication. <br/><br/>
+            Here are a few of the awards and certifications I have received:<br/><br/><br/>
+            </center>
         </p>
         <Slider 
             cardsToShow={ 1 }
             showDots={ false }
-            infinite={ true }
             showArrow={ true }
             autoSlide={ true }
             slideTime={ 5000 }

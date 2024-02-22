@@ -64,11 +64,17 @@ export const ProjectsWindowDisplay = styled.div`
         grid-template-rows: 1fr 1fr 1fr;
     }
 
+    @media (max-width: 768px) {
+        padding: 20px; /* Reduced padding */
+        margin: 80px 0; /* Adjusted margin */
+    }
+    
     @media (max-width: 576px) {
         grid-template-columns: 1fr;
-        padding: 40px;
         margin: 100px 0 0 0;
         grid-template-rows: 1fr auto 1fr;
+        padding: 15px; /* Further reduced for very small screens */
+        margin: 60px 0; /* Adjusted margin for very small screens */
     }
 
     @media (max-width: 420px) {
@@ -95,6 +101,13 @@ export const ProjectsWindowImage = styled.div`
         &:hover {
             transform: scale(1.02);
             box-shadow: 10px 10px 10px black;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%; /* Allow some margin around images */
+        }
+        @media (max-width: 576px) {
+            width: 100%; /* Maximize image size within the container */
         }
     }
     @media (max-width: 1400px) {
@@ -152,6 +165,14 @@ export const ProjectsWindowHeader = styled.div`
         grid-column-start: 1;
         grid-column-end: 3;
     }
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 22px; /* Adjusted for smaller screens */
+        }
+        p {
+            font-size: 14px; /* Adjusted for smaller screens */
+        }
+    }
     @media (max-width: 576px) {
         padding: 0 0 20px 0;
     }
@@ -187,6 +208,14 @@ export const ProjectsWindowInfo = styled.ul`
     }
     @media (max-width: 1400px) {
         padding: 10px 0 0 0;
+    }
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 20px; /* Adjusted for smaller screens */
+        }
+        li {
+            font-size: 14px; /* Adjusted for readability */
+        }
     }
     @media (max-width: 576px) {
         padding: 0 30px 0 0;
@@ -225,7 +254,16 @@ export const ProjectsWindowButtons = styled.div`
     @media (max-width: 992px) {
         flex-direction: column;
     }
+    @media (max-width: 768px) {
+        button {
+            padding: 10px; /* Adjust padding for better touch target size */
+            font-size: 14px; /* Ensure text within buttons is readable */
+            margin-bottom: 10px; /* Add margin between buttons when stacked */
+        }
+    }
+    
     @media (max-width: 576px) {
+        justify-content: center; /* Center buttons for aesthetics */
         padding: 0 0 0 10px;
     }
     @media (max-width: 420px) {
