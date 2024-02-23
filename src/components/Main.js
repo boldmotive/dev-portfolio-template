@@ -31,7 +31,7 @@ const Main = () => {
 
           </em>
           </h3>
-        <br/><br/>
+        <br/>
       <WelcomeText>
           
           
@@ -45,13 +45,26 @@ const Main = () => {
           <br/>
           <h3>Software Engineer based in New York</h3>
           <br/>
-          <ModernButton>
-            <Link to="/projects">
-              View My Projects
-              </Link>
-            </ModernButton>
+          <table>
+            <tr>
+              <td>
+              <ModernButton>
+                <Link to="/about">
+                Learn About Me
+                </Link>
+              </ModernButton>
+              </td>
+
+              <td>
+              <ModernButton>
+                <Link to="/projects">
+                View My Projects
+                </Link>
+              </ModernButton>
+              </td>
+            </tr>
+          </table>
       </WelcomeText>
-      <br/><br/>
       
       <h3 style={{ textAlign: 'center' }}>
         <em>
@@ -59,7 +72,7 @@ const Main = () => {
         </em><br/>
               React, Node.js, JavaScript, HTML, CSS, Git, Ethereum
       </h3>
-      <br/><br/>
+      <br/>
       <Skills></Skills>
     </HomeMainContainer>
     
