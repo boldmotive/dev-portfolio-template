@@ -17,7 +17,7 @@ const Main = () => {
       <WelcomeHeader>
         <h1>
           <strong>
-            Welcome to my portfolio
+            Welcome to my portfolio template
           </strong>
         </h1> 
       </WelcomeHeader>
@@ -70,7 +70,7 @@ const Main = () => {
         <em>
           My Development Skills:<br/>
         </em><br/>
-              React, Node.js, JavaScript, HTML, CSS, Git, Ethereum
+              HTML, CSS, JavaScript, React, Node.js, Git, Ethereum
       </h3>
       <br/>
       <Skills></Skills>

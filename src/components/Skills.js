@@ -15,10 +15,6 @@ const Contact = () => {
       <Marquee speed={100} loop={0} gradientWidth={600}>
 
         <SkillsIconContainer>
-
-          <SingleSkill>
-            <FontAwesomeIcon icon={faEthereum} />
-          </SingleSkill>
         
           <SingleSkill>
             <FontAwesomeIcon icon={faHtml5} />
@@ -26,6 +22,10 @@ const Contact = () => {
         
           <SingleSkill>
             <FontAwesomeIcon icon={faCss3} />
+          </SingleSkill>
+
+          <SingleSkill>
+            <FontAwesomeIcon icon={faJsSquare} />
           </SingleSkill>
         
           <SingleSkill>
@@ -37,11 +37,11 @@ const Contact = () => {
           </SingleSkill>
           
           <SingleSkill>
-            <FontAwesomeIcon icon={faJsSquare} />
-          </SingleSkill>
-          
-          <SingleSkill>
             <FontAwesomeIcon icon={faGit} />
+          </SingleSkill>
+
+          <SingleSkill>
+            <FontAwesomeIcon icon={faEthereum} />
           </SingleSkill>
 
         </SkillsIconContainer>
