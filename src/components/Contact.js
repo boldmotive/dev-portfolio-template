@@ -1,45 +1,60 @@
-// ContactPage.js
 import React from 'react';
 import { ContactContainer, Form, Input, TextArea, Button } from '../styles/ContactStyle';
 
-const ContactPage = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here, you would handle form submission, like sending data to your server or an API endpoint
-    alert("Form submitted. We'll get back to you soon!");
+export default function Contact() {
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
   };
 
   return (
     <ContactContainer>
-      <Form onSubmit={handleSubmit}>
-        <h2>Get in touch with Bold Motive Group</h2><br/>
-        <p>We made this character portfolio so that you can grow as a developer.
-            You can {" "}
-            <a 
-                href="https://www.pensight.com/x/boldmotive"
-                target="_blank"
-                rel="noreferrer"
-                style={{ color: 'blue' }}>
-                    purchase it on our website
-            </a>
-            {" "}
-            and use it to create your own portfolio.<br/><br/>
-            Follow us on {" "}
-            <a 
-                href="https://www.instagram.com/computer.science.society"
-                target="_blank"
-                rel="noreferrer"
-                style={{ color: 'blue' }}>
-                    Instagram
-            </a>
-            {" "} and send a DM to learn more about the Computer Science Society!</p><br/>
-        <Input type="text" placeholder="Your Name" required />
-        <Input type="email" placeholder="Your Email" required />
-        <TextArea placeholder="Your Message" required></TextArea>
-        <Button type="submit">Send Message</Button>
+      <Form onSubmit={onSubmit}>
+        <p>
+          <a
+            href="https://www.pensight.com/x/boldmotive"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: 'blue' }}>
+            purchase it on our website
+            {" "} and use it to create your own portfolio.<br/><br/>
+          </a>
+          <a
+            href="https://www.pensight.com/x/boldmotive"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: 'blue' }}>
+            purchase it on our website
+            {" "} and use it to create your own portfolio.<br/><br/>
+          </a>
+        </p>
+        <Input type="text" name="name" placeholder="Your Name" required />
+        <Input type="email" name="email" placeholder="Your Email" required />
+        <TextArea name="message" placeholder="Your Message" required />
+        <Button type="submit">Send</Button>
+        <p>{result}</p>
       </Form>
+      <span>{result}</span>
     </ContactContainer>
   );
-};
-
-export default ContactPage;
+}
