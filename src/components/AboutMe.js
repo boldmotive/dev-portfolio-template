@@ -27,23 +27,14 @@ const AboutMe = () => {
                 <img src={ PixelParker } alt="profile" />
             </HeadshotColumn>
             <AboutColumn>
-                <h1>Learn More About Pixel Parker</h1><br/><br/>
-                <p>Known for her superb teaching skills at the Computer Science Society,
-                Pixel Parker is a full-stack software engineer based in New York. She has a passion for
-                creating and developing software that is both user-friendly and efficient.<br/>
+                <h1>Learn More About *Insert Your Name*</h1><br/><br/>
+                <p>*This section allows you to introduce yourself to employers, clients, or collaborators.*<br/>
 
-                <br/>Pixel has a strong background in computer science and has worked with a variety of
-                programming languages and frameworks. She is a quick learner and is always eager to
-                learn new things. She is also a great team player and enjoys collaborating with others
-                to create amazing software.<br/>
+                <br/>*Use this space to highlight key details about yourself and your knowledge of programming*<br/>
 
-                <br/>In her free time, Pixel enjoys playing video games, reading, and spending time with her
-                friends and family. She is also an avid fan of the New York Mets and enjoys going to games
-                whenever she can.
+                <br/>*You don’t have to use this, but this is a general basis of what you might want to convey*
                 
-                <br/><br/>Pixel is currently seeking new opportunities and is open to work. If you would like to
-                learn more about her or her work, feel free to reach out to her via the contact page. She would
-                love to hear from you!
+                <br/><br/>
             
                 </p>
             </AboutColumn>
@@ -62,8 +53,8 @@ const AboutMe = () => {
         <p>
             {/* List awards and certifications here */}
             <center>
-            I have earned my qualifications over the past several years and have been recognized for my hard work and dedication. <br/><br/>
-            Here are a few of the awards and certifications I have received:<br/><br/><br/>
+            *List out awards and certifications you have earned either text or image of certifications*<br/><br/>
+            Here are a few of the awards and certifications I have received: <br/><br/><br/>
             </center>
         </p>
         <Slider 
