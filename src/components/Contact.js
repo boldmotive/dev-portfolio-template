@@ -9,7 +9,7 @@ export default function Contact() {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "ee46c320-467c-400e-8220-67a82979974a");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -21,6 +21,7 @@ export default function Contact() {
     if (data.success) {
       setResult("Form Submitted Successfully");
       event.target.reset();
+      setTimeout(() => setResult(""), 5000); // Clear the message after 5 seconds
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -39,14 +40,6 @@ export default function Contact() {
             purchase it on our website
             {" "} and use it to create your own portfolio.<br/><br/>
           </a>
-          <a
-            href="https://www.pensight.com/x/boldmotive"
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: 'blue' }}>
-            purchase it on our website
-            {" "} and use it to create your own portfolio.<br/><br/>
-          </a>
         </p>
         <Input type="text" name="name" placeholder="Your Name" required />
         <Input type="email" name="email" placeholder="Your Email" required />
@@ -54,7 +47,6 @@ export default function Contact() {
         <Button type="submit">Send</Button>
         <p>{result}</p>
       </Form>
-      <span>{result}</span>
     </ContactContainer>
   );
 }
