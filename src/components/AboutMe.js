@@ -9,7 +9,7 @@ import {
     StyledSlider,
     } from '../styles/AboutMeStyle';
 
-import PixelParker from '../images/PixelParker-logo.png';
+import Headshot from '../images/Headshot.png';
 import cert1 from '../images/certificates/cert1.png';
 import cert2 from '../images/certificates/cert2.png';
 import cert3 from '../images/certificates/cert3.png';
@@ -24,7 +24,7 @@ const AboutMe = () => {
     <AboutMainContainer>
         <TwoColumnLayout>
             <HeadshotColumn>
-                <img src={ PixelParker } alt="profile" />
+                <img src={ Headshot } alt="profile" />
             </HeadshotColumn>
             <AboutColumn>
                 <h1>Learn More About *Insert Your Name*</h1><br/><br/>
