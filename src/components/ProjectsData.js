@@ -1,34 +1,34 @@
-import ecobuddy from "../images/projects/ecobuddy.png";
-import computerScienceSociety from "../images/projects/computerScienceSociety.png";
+import BlankPhoto from "/Users/Briana/Desktop/dev-prorfNEW/dev-portfolio-template/src/images/projects/BlankPhoto.png";
+import BlankPhoto2 from "/Users/Briana/Desktop/dev-prorfNEW/dev-portfolio-template/src/images/projects/BlankPhoto.png";
 // import theBestOfUs from '../images/theBestOfUs.png';
-
+//"../images/projects/ecobuddy.png"
 export const ProjectsData = {
   projects: [
     {
       id: 1,
-      imgSrc: computerScienceSociety,
-      title: "The Computer Science Society",
-      desc: "The #1 Community for Computer Scientists Who Care About Honing Their Craft",
-      info: "A website for computer scientists to connect, share resources, and learn from each other.",
+      imgSrc: BlankPhoto2,
+      title: "{Include Project Title Here}",
+      desc: "Breif Description on what the project is about",
+      info: "This is where you'll input the project details, time frames, and Key Features. Mention the importance of the project!",
       skillsHeader: "Key Skills",
-      skills: "React, HTML, CSS, JavaScript, Python, Django",
+      skills: "React, HTML, CSS, JavaScript, Python, Django {Change to your skills}",
       buttonOne: "Follow on Instagram",
       buttonTwo: "Visit Website",
-      code: "https://instagram.com/computer.science.society",
-      visit: "https://pensight.com/x/boldmotive",
+      code: "Your Code Link",
+      visit: "Your Code Link",
     },
     {
       id: 2,
-      imgSrc: ecobuddy,
-      title: "The Leading AI Job Search Tool for Tech Professionals",
-      desc: "Built with accessibility, efficiency, and scalability in mind",
-      info: "A decentralized job search platform for tech professionals. Users can create a profile, search for jobs, and apply using the Ethereum blockchain.",
+      imgSrc: BlankPhoto,
+      title: "{Include Project Title Here}",
+      desc: "Breif Description on what the project is about",      
+      info: "This is where you'll input the project details, time frames, key features. Mention the importance of the project!",
       skillsHeader: "Key Skills",
-      skills: "Solidity, React, Redux",
+      skills: "Solidity, React, Redux {Change to your skills}",
       buttonOne: "View Project Code",
       buttonTwo: "Visit Website",
-      code: "https://github.com/boldmotive/",
-      visit: "https://ecobuddy.io",
+      code: "Your Code Link",
+      visit: "Your Code Link",
     },
     // {
     //   id: 3,
