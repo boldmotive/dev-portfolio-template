@@ -17,14 +17,14 @@ const Main = () => {
       <WelcomeHeader>
         <h1>
           <strong>
-            Welcome to my portfolio template
+            Welcome to creating a Website
           </strong>
         </h1> 
       </WelcomeHeader>
       <br/><br/>
         <h3 style={{ textAlign: 'center' }}>
           <em>
-            My name is Pixel Parker and I am so glad to see you here!
+            Here we'll introduce ourselves. Ex: My name is...
           
           <br/>
           Have a look around and feel free to reach out to me.
@@ -70,7 +70,7 @@ const Main = () => {
         <em>
           My Development Skills:<br/>
         </em><br/>
-              HTML, CSS, JavaScript, React, Node.js, Git, Ethereum
+              Your coding languages, ex: HTML, CSS, JavaScript, React, Node.js, Git, Ethereum...
       </h3>
       <br/>
       <Skills></Skills>
