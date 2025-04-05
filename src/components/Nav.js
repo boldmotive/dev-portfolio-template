@@ -26,15 +26,15 @@ const Nav = () => {
                 <MyName onClick={() => {
                             setMobileNav(false)
                             }}>
-                    <h1 onClick={() => navigate("./")} >Pixel Parker</h1>
+                    <h1 onClick={() => navigate("./")} >Your Name</h1>
                     <SocialLinks>
-                        <a href="https://linkedin.com/company/boldmotive" target="_blank" rel="noreferrer">
+                        <a href="insert your LinkedIn url" target="_blank" rel="noreferrer">
                             <LinkedIn><FontAwesomeIcon icon={faLinkedin}/></LinkedIn>
                         </a>
-                        <a href="https://github.com/boldmotive" target="_blank" rel="noreferrer">
+                        <a href="insert your GitHub url" target="_blank" rel="noreferrer">
                             <GitHub><FontAwesomeIcon icon={faGithub}/></GitHub>
                         </a>
-                        <a href="mailto:hello@boldmotive.org" target="_blank" rel="noreferrer">
+                        <a href="insert your Email" target="_blank" rel="noreferrer">
                             <Email><FontAwesomeIcon icon={faEnvelope}/></Email>
                         </a>
                     </SocialLinks>
@@ -71,13 +71,13 @@ const Nav = () => {
                     <SocialLinksExtended onClick={() => {
                             setMobileNav((curr) => !curr)
                             }}>
-                        <a href="https://linkedin.com/company/boldmotive" target="_blank" rel="noreferrer">
+                        <a href="insert your LinkedIn url" target="_blank" rel="noreferrer">
                             <LinkedIn><FontAwesomeIcon icon={faLinkedin}/></LinkedIn>
                         </a>
-                        <a href="https://github.com/boldmotive" target="_blank" rel="noreferrer">
+                        <a href="insert your GitHub url" target="_blank" rel="noreferrer">
                             <GitHub><FontAwesomeIcon icon={faGithub}/></GitHub>
                         </a>
-                        <a href="mailto:hello@boldmotive.org" target="_blank" rel="noreferrer">
+                        <a href="insert your Email" target="_blank" rel="noreferrer">
                             <Email><FontAwesomeIcon icon={faEnvelope}/></Email>
                         </a>
                     </SocialLinksExtended>
