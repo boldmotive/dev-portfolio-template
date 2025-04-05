@@ -31,14 +31,26 @@ export default function Contact() {
   return (
     <ContactContainer>
       <Form onSubmit={onSubmit}>
+        <h1>Contact Me</h1>
+        <p>
+          If you have any questions or would like to get in touch, please fill out the form below.
+          I will get back to you as soon as possible.
+          <br/><br/>
+          You can also reach me on my social media channels:
+          <br/><br/>
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">LinkedIn</a>
+          <br/>
+          <a href="https://twitter.com/yourprofile" target="_blank" rel="noreferrer">Twitter</a>
+          <br/>
+        </p>
+        <br/><br/>
         <p>
           <a
             href="https://www.pensight.com/x/boldmotive"
             target="_blank"
             rel="noreferrer"
             style={{ color: 'blue' }}>
-            purchase it on our website
-            {" "} and use it to create your own portfolio.<br/><br/>
+            Click to purchase the official React Developer template and use it to create your own portfolio.<br/><br/>
           </a>
         </p>
         <Input type="text" name="name" placeholder="Your Name" required />

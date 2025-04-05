@@ -1,5 +1,5 @@
-import BlankPhoto from "/Users/Briana/Desktop/dev-prorfNEW/dev-portfolio-template/src/images/projects/BlankPhoto.png";
-import BlankPhoto2 from "/Users/Briana/Desktop/dev-prorfNEW/dev-portfolio-template/src/images/projects/BlankPhoto.png";
+import BlankPhoto from "../images/projects/BlankPhoto.png";
+import BlankPhoto2 from "../images/projects/BlankPhoto.png";
 // import theBestOfUs from '../images/theBestOfUs.png';
 //"../images/projects/ecobuddy.png"
 export const ProjectsData = {

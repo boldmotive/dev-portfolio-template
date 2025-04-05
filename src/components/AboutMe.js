@@ -9,7 +9,7 @@ import {
     StyledSlider,
     } from '../styles/AboutMeStyle';
 
-import Headshot from '../images/Headshot.png';
+import Headshot from '../images/projects/Headshot.png';
 import cert1 from '../images/certificates/cert1.png';
 import cert2 from '../images/certificates/cert2.png';
 import cert3 from '../images/certificates/cert3.png';
